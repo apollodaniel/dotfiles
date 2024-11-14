@@ -1,24 +1,23 @@
 # block everything else
-/*
-**.norg
+.config/*
 
 # zshrc
 !/.zshrc
 
 # hyprland
-!.config/hypr
-!.config/waybar
-!.config/kitty
-!.config/rofi/
+!/.config/hypr
+!/.config/waybar
+!/.config/kitty/kitty.conf
 
 # bspwm
 !/.config/polybar/
 !/.config/sxhkd/
 !/.config/bspwm/
 !/.config/picom.conf
-!/.config/alacritty/
+!/.config/alacritty/alacritty.toml
 
 # neovim
+.config/nvim/vscode-chrome-debug
 !/.config/nvim/
 !/.nvimrc
 !/.editorconfig
@@ -30,6 +29,5 @@
 /.config/qutebrowser/*
 !/.config/qutebrowser/fdm_download.sh
 !/.config/qutebrowser/qutebrowser-mpv.sh
-!/.config/qutebrowser/config.py
 !/.config/qutebrowser/config.py
 
