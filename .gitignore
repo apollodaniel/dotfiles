@@ -1,0 +1,35 @@
+# block everything else
+/*
+**.norg
+
+# zshrc
+!/.zshrc
+
+# hyprland
+!.config/hypr
+!.config/waybar
+!.config/kitty
+!.config/rofi/
+
+# bspwm
+!/.config/polybar/
+!/.config/sxhkd/
+!/.config/bspwm/
+!/.config/picom.conf
+!/.config/alacritty/
+
+# neovim
+!/.config/nvim/
+!/.nvimrc
+!/.editorconfig
+
+# others
+!/.gitignore
+
+# qutebrowser
+/.config/qutebrowser/*
+!/.config/qutebrowser/fdm_download.sh
+!/.config/qutebrowser/qutebrowser-mpv.sh
+!/.config/qutebrowser/config.py
+!/.config/qutebrowser/config.py
+
