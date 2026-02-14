@@ -1,0 +1,72 @@
+* {
+    bg:             #000000;
+    fg:             #FFFFFF;
+    fg-muted:       #8f8f8f;
+    accent:         #FD971F;
+    accent-muted:   #FD971F75;
+    accent-dim:     #FD971F25;
+    urgent:         #F92672;
+    background-color: @bg;
+    text-color:       @fg;
+    font:             "monospace 10";
+}
+window {
+    width:            600px;
+    border:           2px solid;
+    border-color:     @accent;
+    border-radius:    0px;
+    padding:          0px;
+}
+mainbox {
+    spacing:          0px;
+    children:         [ inputbar, listview ];
+}
+inputbar {
+    padding:          4px 4px;
+    background-color: @bg;
+    border:           0 0 2px 0;
+    border-color:     @accent-muted;
+    children:         [ prompt, entry ];
+}
+prompt {
+    padding:          0px 4px 0px 0px;
+    text-color:       @accent;
+}
+entry {
+    text-color:       @fg;
+    placeholder:      "Search clipboard...";
+    placeholder-color: @fg-muted;
+}
+listview {
+    lines:            8;
+    scrollbar:        false;
+    padding:          0px;
+    fixed-height:     true;
+}
+element {
+    padding:          3px 4px;
+}
+element normal.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+element normal.active {
+    background-color: @bg;
+    text-color:       @accent;
+}
+element selected.normal {
+    background-color: @accent-dim;
+    text-color:       @fg;
+    border:           0 0 0 2px;
+    border-color:     @accent;
+}
+element selected.active {
+    background-color: @accent-dim;
+    text-color:       @accent;
+    border:           0 0 0 2px;
+    border-color:     @accent;
+}
+element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}

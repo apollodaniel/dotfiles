@@ -1,0 +1,93 @@
+* {
+    bg:             #000000;
+    fg:             #FFFFFF;
+    fg-muted:       #8f8f8f;
+    accent:         #FD971F;
+    accent-muted:   #FD971F75;
+    accent-dim:     #FD971F25;
+    urgent:         #F92672;
+    background-color: @bg;
+    text-color:       @fg;
+    font:             "monospace 10";
+}
+window {
+    location:         west;
+    anchor:           west;
+    width:            400px;
+    height:           100%;
+    border:           0 2px 0 0;
+    border-color:     @accent;
+    border-radius:    0px;
+    padding:          0px;
+}
+mainbox {
+    spacing:          0px;
+    children:         [ inputbar, listview ];
+}
+inputbar {
+    padding:          6px 8px;
+    background-color: @bg;
+    border:           0 0 2px 0;
+    border-color:     @accent-muted;
+    children:         [ prompt, entry ];
+}
+prompt {
+    padding:          0px 8px 0px 0px;
+    text-color:       @accent;
+}
+entry {
+    text-color:       @fg;
+    placeholder:      "Run command...";
+    placeholder-color: @fg-muted;
+}
+listview {
+    lines:            50;
+    scrollbar:        true;
+    padding:          0px;
+    fixed-height:     true;
+    dynamic:          false;
+}
+scrollbar {
+    handle-width:     4px;
+    handle-color:     @accent-muted;
+    background-color: @bg;
+    border:           0 0 0 1px;
+    border-color:     @accent-dim;
+}
+element {
+    padding:          4px 8px;
+}
+element normal.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+element normal.active {
+    background-color: @bg;
+    text-color:       @accent;
+}
+element normal.urgent {
+    background-color: @bg;
+    text-color:       @urgent;
+}
+element selected.normal {
+    background-color: @accent-dim;
+    text-color:       @fg;
+    border:           0 0 0 2px;
+    border-color:     @accent;
+}
+element selected.active {
+    background-color: @accent-dim;
+    text-color:       @accent;
+    border:           0 0 0 2px;
+    border-color:     @accent;
+}
+element selected.urgent {
+    background-color: @accent-dim;
+    text-color:       @urgent;
+    border:           0 0 0 2px;
+    border-color:     @urgent;
+}
+element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
